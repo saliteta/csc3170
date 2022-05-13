@@ -16,3 +16,11 @@ Using hashing method to encode the password, and save it in the database. This a
 when some hackers need to steal the info from your submit page, they will use the Cross Site Request Forgery(CSRF)
 using hidden_tag() function:
 detailed information is in: https://dl.acm.org/doi/abs/10.1145/1455770.1455782 (Robust defenses for cross-site request forgery.  Authors: Adam Barth, Collin Jackson, John C. Mitchell)
+
+
+# Data analysis:
+Using the NLP technique to do the sentiment analysis
+Using the LSTM and BERT network. training dataset: twitter. Test dataset: Jobs' talk in Standford
+Detailed information of LSTM(A. Graves, N. Jaitly and A. Mohamed, "Hybrid speech recognition with Deep Bidirectional LSTM," 2013 IEEE Workshop on Automatic Speech Recognition and Understanding, 2013, pp. 273-278, doi: 10.1109/ASRU.2013.6707742)
+Detailed Information of BERT(BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. Author: Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova. arXiv:1810.04805)
+![image](https://user-images.githubusercontent.com/88835096/168285978-1ff61eb0-22bf-453d-8441-a845ec56edb5.png)
