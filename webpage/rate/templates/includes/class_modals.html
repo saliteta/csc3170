@@ -1,0 +1,73 @@
+<style>
+    .modal-content {
+      background-color: #212121
+    }
+  </style>
+  
+  <!-- More Info -->
+  <div class="modal fade" id="Modal-MoreInfo-{{ item.id }}"
+       tabindex="-1"
+       aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">
+            <!-- more info-->
+            {{ item.name }}
+          </h5>
+          <button type="button" class="close"
+                  data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {{ item.price }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"
+                  data-dismiss="modal">Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Purchase Confirm -->
+  <div class="modal fade" id="Modal-Rate-{{item.id}}"
+       tabindex="-1"
+       aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">
+            <!-- -->
+            <h3 class = "text-center">{{item.name}}</h3>
+          </h5>
+          <button type="button" class="close"
+                  data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method = "POST">
+            {{ newRateForm.hidden_tag() }}
+            <br>
+
+            {{ newRateForm.Difficulty.label() }}
+            {{ newRateForm.Difficulty(class="form-control", placeholder="Difficulty") }}
+
+            {{ newRateForm.Quality.label() }}
+            {{ newRateForm.Quality(class="form-control", placeholder="Quality") }}
+            <h4 class = "text-center">Session Rate Form saliteta</h4>
+            {{newRateForm.submit(class = "btn btn-outline-success btn-block")}}
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"
+                  data-dismiss="modal">Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}
+    Register
+{% endblock %}
+
+
+{% block content %}
+    <body class = 'text-center'>
+        <div class = "container">        
+            <form method="POST" class = 'form-register' style= 'color:white'>
+
+                <!--when some hackers need to steal the info from your submit page, they will use the Cross Site Request Forgery(CSRF)-->
+                {{ form.hidden_tag() }}
+                <!-- using this method to fight against the hackers -->
+                <img class="mb-4" src="https://img.icons8.com/color/344/hatsune-miku.png" alt="" height="150" width="150">
+                <h1 class="h3 mb-3 font-weight-normal">
+                    Please Create your Account
+                </h1>
+
+                {{form.username.label()}}
+                {{form.username(class = 'form-control', placeholder = "username")}}
+
+                {{form.email_address.label()}}
+                {{form.email_address(class = 'form-control', placeholder = "Email Address")}}
+
+                {{form.password1.label()}}
+                {{form.password1(class = 'form-control', placeholder = "Password")}}
+
+                {{form.password2.label()}}
+                {{form.password2(class = 'form-control', placeholder = "Enter Password Again")}}
+                <br>
+                <div class="checkbox mb-3">
+                    <h6>Already have an account?</h6>
+                    <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Login</a>
+                 </div>
+                <br>
+                {{form.submit(class = 'btn btn-lg btn-block btn-primary')}}
+
+                <!-- need to validate the result-->
+            </form> <!-- methid POST means the client will do something to change the current stage of you database-->
+        </div>
+    </body>
+
+            
+{% endblock %}

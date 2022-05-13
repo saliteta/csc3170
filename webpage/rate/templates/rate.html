@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Rate Page
+{% endblock %}
+
+{% block content %}
+
+
+    <div class = "row" style="margin-top:20px; margin-left:20px;">
+        <div class = "col-8">
+            <h2>session you can rate</h2>
+            <p>starte rating by click rate bottum</p>
+            <br>
+            <table class="table table-hover table-dark"><!-- refersence a bootstrap class to imporve your css design style-->
+                <thead>
+                    <tr>
+                        <!-- Your Columns HERE -->
+                        <!--this is the column of the table-->
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Barcode</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Your rows inside the table HERE: -->
+                    <!--this represent the row or the tuples of the tables-->
+                    {% for item in items %} <!-- get the input from the ouside , or say the python script-->
+                    <!--using % to raise a logic semantic jinja text-->
+                    {% include 'includes/class_modals.html' %}
+                    <!-- sing the modals is in the loop, it has the access to the item-->
+                        <tr>
+                            <td>{{ item.id }}</td>   <!--first row -->
+                            <td>{{ item.name }}</td> <!-- by typing cruly brakets twince we access the argument passed in-->
+                            <td>{{ item.barcode }}</td>
+                            <td>{{ item.price }}$</td> <!-- add a $ out side the brakets-->
+                            
+                            <td>
+                                <!--by changing the modal in the loop to give it a more detailed information-->
+                                <button class="btn btn-outline btn-info" data-toggle="modal" data-target = "#Modal-MoreInfo-{{ item.id }}">More Info</button>
+                                <!--buttoms for reaction-->
+                                <button class="btn btn-outline btn-success" data-toggle = "modal" data-target ="#Modal-Rate-{{ item.id }}" >Rate This Session</button>
+                            </td>
+                        </tr>
+                    {% endfor %} <!--this is where we end the loop-->
+                </tbody>
+            </table>
+        </div>
+        <div class = "col-4">
+            <h1>Rated class</h1>
+            <p>click rerate to change the rated result</p>
+        </div>
+    </div>
+    
+{%endblock%}
