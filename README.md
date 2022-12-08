@@ -5,7 +5,7 @@ This repository includes the **Nature Language Processing Sentiment-Analysis** p
 
 ![image](https://user-images.githubusercontent.com/88835096/168282548-fd0b0b17-dcd3-473b-a345-66782e90d380.png)
 
-#Hashing
+# Hashing
 Using hashing method to encode the password, and save it in the database. This job will increase the security of the database:
 - The origin password is 123456, after hashing, it was encode to a 48 byte hashing code:
 ![Screenshot from 2022-05-13 17-10-26](https://user-images.githubusercontent.com/88835096/168283160-146a55e3-6303-4367-9d64-e6fc8ce6fb7d.png)
