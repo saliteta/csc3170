@@ -8,8 +8,8 @@ This repository includes the **Nature Language Processing Sentiment-Analysis** p
 #Hashing
 Using hashing method to encode the password, and save it in the database. This job will increase the security of the database:
 - The origin password is 123456, after hashing, it was encode to a 48 byte hashing code:
-- ![Screenshot from 2022-05-13 17-10-26](https://user-images.githubusercontent.com/88835096/168283160-146a55e3-6303-4367-9d64-e6fc8ce6fb7d.png)
-- ![Screenshot from 2022-05-13 17-09-30](https://user-images.githubusercontent.com/88835096/168283200-75d63b88-5338-4a77-854e-b939b7468354.png)
+![Screenshot from 2022-05-13 17-10-26](https://user-images.githubusercontent.com/88835096/168283160-146a55e3-6303-4367-9d64-e6fc8ce6fb7d.png)
+![Screenshot from 2022-05-13 17-09-30](https://user-images.githubusercontent.com/88835096/168283200-75d63b88-5338-4a77-854e-b939b7468354.png)
 
 # Further Security Ensurance
 Using the `hidden_tag` function to increase the security of the website: when some hackers need to steal the info from your submit page, they will need to pass the Cross Site Request Forgery(CSRF) using `hidden_tag()`.
